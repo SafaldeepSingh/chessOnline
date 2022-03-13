@@ -1,0 +1,12 @@
+<ngx-chess-board
+  [size]="500"
+  [lightDisabled]= "player === 2 || !bothPlayersJoined"
+  [darkDisabled]= "player === 1 || !bothPlayersJoined"
+  (moveChange)="onPieceMove()"
+  #board
+></ngx-chess-board>
+<div>
+  <h3 *ngIf="!bothPlayersJoined">Waiting for the other user to Join</h3>
+  <h3 *ngIf="bothPlayersJoined && currentPlayerTurn">Your Turn</h3>
+  <h3 *ngIf="bothPlayersJoined && !currentPlayerTurn">Other Player's Turn</h3>
+</div>

@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Join Game</h1>
+<div mat-dialog-content>
+  <p>Please enter the Code</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Code</mat-label>
+    <input matInput [(ngModel)]="code">
+  </mat-form-field>
+  <div *ngIf="invalidCode" style="color: darkred">Invalid Code. Please enter correct code</div>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-button (click)="checkCode()" cdkFocusInitial>Ok</button>
+</div>

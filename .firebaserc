@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chess-online--angular": {
+      "hosting": {
+        "chess-online": [
+          "chess-online--angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chess-online--angular"
+  }
+}
